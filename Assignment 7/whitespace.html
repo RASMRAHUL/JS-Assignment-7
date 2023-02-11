@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Remove White Spaces</title>
+</head>
+<body>
+    <h2>Enter the string:</h2>
+    <input id="str" type="text">
+    <button onclick="removeSpace()">Remove White Spaces</button>
+    <h3 id="output">Output:</h3>
+    <script>
+        function removeSpace() {
+            let str1 = document.getElementById("str").value;
+            document.getElementById("output").innerHTML = removeWhitespaces(str1);
+        }
+        // function removeWhitespaces(s) {
+        //     return s.replace(/\s+/g, '');
+        // }
+
+        function removeWhitespaces(s) {
+            return s.split(" ").join("");
+        }
+    </script>
+    
+</body>
+</html>

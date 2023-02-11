@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Swap words</title>
+</head>
+<body>
+  <h2>Enter a string with two words:</h2>
+  <input id="str" type="text">
+  <button onclick="swapWords()">Swap words</button>
+  <h3 id="output">Output:</h3>
+  <script>
+    function swapWords() {
+      let str = document.getElementById("str").value;
+      let words = str.split(" ");
+      let result = words[1] + " " + words[0];
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

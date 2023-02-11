@@ -1,0 +1,146 @@
+5. what string method can be used to convert string into array?
+
+We can use the split method to convert a string into an array. 
+The split method takes a separator as an argument, 
+and it splits the string into an array of 
+substrings based on that separator.
+
+ex- 
+let str = "Hello, World!";
+let arr = str.split(" ");
+console.log(arr);
+// Output: [ 'Hello,', 'World!' ]
+
+
+6. What string method can be used to check the occurrence of a 
+specified text in a string ?
+
+We can use the indexOf method to check if a specified 
+text occurs in a string. The indexOf method returns 
+the position of the first occurrence of the specified text 
+in the string, or -1 if the text is not found.
+
+ex-
+let str = "Hello, World!";
+let index = str.indexOf("World");
+console.log(index);
+// Output: 7
+
+You can also use the includes method to check if a string 
+contains a specified text. The includes method returns
+a Boolean value indicating whether the specified text
+ was found in the string.
+
+ex-
+let str = "Hello, World!";
+let includes = str.includes("World");
+console.log(includes);
+// Output: true
+
+
+
+7. How can you break a string to a newline in Javascript?
+
+can use the escape sequence \n to insert a newline character
+in a string. The newline character is treated as a 
+line break when rendering the string in the output.
+
+ex-
+let str = "Hello,\nWorld!";
+console.log(str);
+// Output:
+// Hello,
+// World!
+
+
+
+8. Write a Javascript function to test whether the first 
+character of a string is lowercase.
+
+function isFirstCharacterLowercase(str) {
+  return str[0] === str[0].toLowerCase();
+}
+
+let inputString = "hello world";
+console.log(isFirstCharacterLowercase(inputString)); // true
+
+inputString = "Hello world";
+console.log(isFirstCharacterLowercase(inputString)); // false
+
+
+9. Give a correct verdict to users input if he enters "yes" , "YES","Yes", etc (any combination)
+ using string method.
+
+ function giveVerdict(input) {
+  if (input.toLowerCase() === "yes") {
+    return "Accepted";
+  } else {
+    return "Rejected";
+  }
+}
+
+let userInput = "yes";
+console.log(giveVerdict(userInput)); // "Accepted"
+
+userInput = "YES";
+console.log(giveVerdict(userInput)); // "Accepted"
+
+userInput = "Yes";
+console.log(giveVerdict(userInput)); // "Accepted"
+
+userInput = "no";
+console.log(giveVerdict(userInput)); // "Rejected"
+
+
+
+10. Given a String S, achieve following tasks 
+
+a) Convert the String into upper case. 
+
+b) Convert only the first character to uppercase.
+
+c) Convert the String into lower case.
+
+d) Break the string into two halves and swap them.
+
+e) Count the repeating characters.
+
+f) Reverse the string
+
+
+
+let input = "hello world";
+
+// a) Convert the String into upper case
+let upperCase = input.toUpperCase();
+console.log("Uppercase: " + upperCase);
+
+// b) Convert only the first character to uppercase
+let firstCharUppercase = input[0].toUpperCase() + input.slice(1);
+console.log("First character uppercase: " + firstCharUppercase);
+
+// c) Convert the String into lower case
+let lowerCase = input.toLowerCase();
+console.log("Lowercase: " + lowerCase);
+
+// d) Break the string into two halves and swap them
+let half = input.length / 2;
+let firstHalf = input.slice(0, half);
+let secondHalf = input.slice(half);
+let swapped = secondHalf + firstHalf;
+console.log("Swapped: " + swapped);
+
+// e) Count the repeating characters
+let charCount = {};
+for (let char of input) {
+  if (charCount[char]) {
+    charCount[char]++;
+  } else {
+    charCount[char] = 1;
+  }
+}
+console.log("Character count: " + JSON.stringify(charCount));
+
+// f) Reverse the string
+let reversed = input.split('').reverse().join('');
+console.log("Reversed: " + reversed);

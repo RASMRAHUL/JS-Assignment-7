@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exchange Letter</title>
+</head>
+<body>
+  <h2>Enter a string :</h2>
+  <input id="str" type="text">
+  <button onclick="replaceletter()">Swap a by x</button>
+  <h3 id="output">Output:</h3>
+  <script>
+    function replaceletter() {
+      let str = document.getElementById("str").value;
+      function replacelettera(str) {
+            return str.replace(/a/g, 'x');
+        }
+
+      document.getElementById("output").innerHTML = replacelettera(str);
+    }
+  </script>
+</body>
+</html>

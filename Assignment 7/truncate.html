@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Truncate</title>
+</head>
+<body>
+    <h2>Enter the string:</h2>
+    <input id="str" type="text">
+    <button onclick="truncate()">Truncate</button>
+    <h3 id="output">Output:</h3>
+    <script>
+        function truncate() {
+            let str1 = document.getElementById("str").value;
+            document.getElementById("output").innerHTML = truncatestring(str1);
+        }
+        function truncatestring(str1)
+        {
+            if(str1.length <=4)
+                return str1;
+            else
+                 return str1.slice(0, 4) + "...";
+        }
+    </script>
+    
+</body>
+</html>
